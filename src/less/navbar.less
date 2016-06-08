@@ -10,7 +10,7 @@
 
 .navbar {
   position: relative;
-  min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  //min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
   border: 1px solid transparent;
 
@@ -30,6 +30,8 @@
 
 .navbar-header {
   &:extend(.clearfix all);
+  margin-left:10px !important;
+  margin-right:10px !important;
 
   @media (min-width: @grid-float-breakpoint) {
     float: left;
@@ -160,12 +162,21 @@
 
 // Brand/project name
 
-.navbar-brand {
+.navbar-brand{
   float: left;
   padding: @navbar-padding-horizontal @navbar-padding-vertical;
   font-size: @font-size-large;
   line-height: @line-height-computed;
-  height: @navbar-height;
+  height:100%;
+  &.logo {
+    background: url(../images/logo.png);
+    background-size: 91px 40px;
+    background-position: @navbar-padding-vertical @navbar-padding-horizontal;
+    background-repeat: no-repeat;
+    height: @navbar-height;
+    width: 121px;
+    margin-right:20px;
+  }
 
   &:hover,
   &:focus {
@@ -233,9 +244,8 @@
   margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
 
   > li > a {
-    padding-top:    10px;
-    padding-bottom: 10px;
-    line-height: @line-height-computed;
+    line-height: (@navbar-height / 2) ;
+    font-size: @padding-large-horizontal;
   }
 
   @media (max-width: @grid-float-breakpoint-max) {
@@ -410,6 +420,45 @@
   }
 
   .navbar-nav {
+    &.nav-list{
+      > li > a{
+        font-size:14px;
+        padding-top:0;
+        padding-bottom:0;
+        line-height:50px;
+        position:relative;
+        padding: 0 20px;
+        &::before{
+          position:absolute;
+          width:70%;
+          height:1px;
+          background:#f36;
+          bottom:2px;
+          left:15%;
+          content:none;
+        }
+
+        &:hover,
+        &:focus {
+          color: @navbar-default-link-hover-color;
+          background-color: transparent;
+          &::before{
+            content:'';
+          }
+        }
+      }
+      > .active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: @navbar-default-link-active-color;
+          background-color: transparent;
+          &::before{
+            content:'';
+          }
+        }
+      }
+    }
     > li > a {
       color: @navbar-default-link-color;
 
@@ -469,7 +518,8 @@
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
         > li > a {
-          color: @navbar-default-link-color;
+          color: @navbar-default-color;
+          background: @navbar-default-bg;
           &:hover,
           &:focus {
             color: @navbar-default-link-hover-color;
@@ -527,7 +577,7 @@
 // Inverse navbar
 
 .navbar-inverse {
-  background-color: @navbar-inverse-bg;
+  background-color: #fff;
   border-color: @navbar-inverse-border;
 
   .navbar-brand {
@@ -551,6 +601,32 @@
       &:focus {
         color: @navbar-inverse-link-hover-color;
         background-color: @navbar-inverse-link-hover-bg;
+      }
+      &.transparent{
+        background-color: @navbar-default-bg;
+        &:hover,
+        &:focus{
+          background-color: @navbar-default-bg;
+          color: @navbar-inverse-link-hover-color;
+        }
+        img.user{
+          width:30px;
+          height:30px;
+          border-radius:50%;
+          vertical-align: top;
+          margin-right: 5px;
+        }
+        .glyphicon.glyphicon-menu-down{
+          font-size:12px;
+          margin-left:3px;
+        }
+        &.btn{
+          padding-top: 0;
+          padding-bottom: 0;
+          margin: 14px 3px;
+          font-size: 14px;
+          display: inline-block;
+        }
       }
     }
     > .active > a {

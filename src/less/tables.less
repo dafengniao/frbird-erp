@@ -34,6 +34,8 @@ th {
         line-height: @line-height-base;
         vertical-align: top;
         border-top: 1px solid @table-border-color;
+        height:44px;
+        vertical-align: middle;
       }
     }
   }
@@ -41,6 +43,7 @@ th {
   > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 2px solid @table-border-color;
+    vertical-align: middle;
   }
   // Remove top border from thead by default
   > caption + thead,
@@ -50,6 +53,7 @@ th {
       > th,
       > td {
         border-top: 0;
+        vertical-align: middle;
       }
     }
   }
@@ -160,6 +164,7 @@ table {
 .table-row-variant(info; @state-info-bg);
 .table-row-variant(warning; @state-warning-bg);
 .table-row-variant(danger; @state-danger-bg);
+.table-row-variant(gblack; @state-gblack-bg);
 
 
 // Responsive tables

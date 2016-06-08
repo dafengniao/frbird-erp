@@ -36,8 +36,16 @@ gulp.task('minifyjs', function(){
 gulp.task('packagejs', function(){
     
     // jquery plugins
-    gulp.src([paths.dist.minified + '/javascript/*.js'])
-        .pipe(concat('main.js'))
+    gulp.src([paths.dist.minified + '/javascript/jquery/jquery.min.js'])
+        .pipe(concat('jquery.js'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(paths.dist.packaged + '/javascript'));
+    gulp.src([paths.dist.minified + '/javascript/bootstrap.min.js'])
+        .pipe(concat('bootstrap.js'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(paths.dist.packaged + '/javascript'));
+    gulp.src([paths.dist.minified + '/javascript/frbird-erp.min.js'])
+        .pipe(concat('frbird-erp.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.dist.packaged + '/javascript'));
 });

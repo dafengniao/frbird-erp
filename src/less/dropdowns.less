@@ -21,6 +21,20 @@
 .dropdown {
   position: relative;
 }
+.dropdown.inherit{
+  position: inherit;
+  .dropdown-menu{
+    width:100%;
+    border-top-color: transparent;
+    border-left:none;
+    border-right:none;
+    border-radius:0;
+    height:50px;
+    .navbar-brand{
+      line-height:30px;
+    }
+  }
+}
 
 // Prevent the focus on the dropdown toggle when closing dropdowns
 .dropdown-toggle:focus {
