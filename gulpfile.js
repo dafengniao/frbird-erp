@@ -44,10 +44,15 @@ gulp.task('packagejs', function(){
         .pipe(concat('bootstrap.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.dist.packaged + '/javascript'));
-    gulp.src([paths.dist.minified + '/javascript/frbird-erp.min.js'])
-        .pipe(concat('frbird-erp.js'))
+    gulp.src([paths.dist.minified + '/javascript/plugins/*.js'])
+        .pipe(concat('plugins.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.dist.packaged + '/javascript'));
+
+    /*gulp.src([paths.dist.minified + '/javascript/frbird-erp.min.js'])
+        .pipe(concat('frbird-erp.js'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest(paths.dist.packaged + '/javascript'));*/
 });
 
 // 预编译less,压缩css

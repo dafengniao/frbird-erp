@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="../dist/packaged/javascript/jquery.min.js"></script>
 	<script type="text/javascript" src="../dist/packaged/javascript/bootstrap.min.js"></script>
 	
-	<!-- <script type="text/javascript" src="../dist/packaged/javascript/frbird-erp.min.js"></script>-->
+	<!--<script type="text/javascript" src="../dist/packaged/javascript/frbird-erp.min.js"></script>-->
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
@@ -20,52 +20,105 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active dropdown inherit">
+					<li class="dropdown">
 						<a href="javascript:void(0);" class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">客服
 						<span class="caret"></span>
 						</a>
-						<div class="dropdown-menu ptb-0" aria-labelledby="dropdownMenu1">
-							<div class="navbar navbar-default mb-0 border-n">
-								<div class="container mlr-4r plr-4r">
-									<div class="navbar-header pl-4r">
-										<div class="navbar-brand">
-											退款售后
-										</div>
-									</div>
-									<div class="navbar-collapse collapse">
-										<ul class="nav navbar-nav nav-list">
-											<li class="active"><a href="">售中退款</a></li>
-											<li><a href="">售后退款</a></li>
-											<li><a href="">退款退货</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-						    <!--<li><a href="#">Action</a></li>
-						    <li><a href="#">Another action</a></li>
-						    <li><a href="#">Something else here</a></li>
-						    <li><a href="#">Separated link</a></li>-->
-						</div>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="">订单查询</a></li>
+							<li><a href="">待付款订单</a></li>
+							<li><a href="">退款售后</a></li>
+							<li><a href="">商品</a></li>
+						</ul>
 					</li>
-					<li><a href="">订单处理</a></li>
-					<li><a href="">库管</a></li>
-					<li><a href="">采购</a></li>
-					<li><a href="">运营</a></li>
-					<li><a href="">财务</a></li>
+					<li class="dropdown">
+						<a href="javascript:void(0);" class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">订单处理
+						<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+							<li><a href="">审单</a></li>
+							<li><a href="">返单</a></li>
+							<li><a href="">打单发货</a></li>
+							<li><a href="">打印设置</a></li>
+							<li><a href="">验货</a></li>
+							<li><a href="">称重</a></li>
+							<li><a href="">商品</a></li>
+							<li><a href="">物流</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:void(0);" class="dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">库管
+						<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+							<li><a href="">入库单</a></li>
+							<li><a href="">出库单</a></li>
+							<li><a href="">调拨单</a></li>
+							<li><a href="">盘点单</a></li>
+							<li><a href="">仓库管理</a></li>
+							<li><a href="">库存监控</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:void(0);" class="dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">采购
+						<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+							<li><a href="">采购单</a></li>
+							<li><a href="">采购退货单</a></li>
+							<li><a href="">库存监控</a></li>
+							<li><a href="">供应商信息</a></li>
+							<li><a href="">商品</a></li>
+							<li><a href="">库存成本</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:void(0);" class="dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">运营
+						<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu5">
+							<li><a href="">商品</a></li>
+							<li><a href="">库存同步</a></li>
+							<li><a href="">赠品策略</a></li>
+							<li><a href="">订单查询</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:void(0);" class="dropdown-toggle" type="button" id="dropdownMenu6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">财务
+						<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu6">
+							<li><a href="">收款</a></li>
+							<li><a href="">付款</a></li>
+							<li><a href="">库存成本</a></li>
+							<li><a href="">基础资料</a></li>
+							<li><a href="">订单查询</a></li>
+						</ul>
+					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="" class="transparent">
+					<li class="dropdown">
+						<a href="javascript:void(0);" class="transparent dropdown-toggle" type="button" id="dropdownMenu7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<span class="glyphicon glyphicon-bell"></span>
 						</a>
+						<ul class="dropdown-menu mr-r" aria-labelledby="dropdownMenu7">
+							<li>
+								<div class="ptb-4r plr-4r">
+									暂时没有新的提醒哦 ...
+								</div>
+							</li>
+						</ul>
 					</li>
-					<li>
-						<a href="" class="transparent">
+					<li class="dropdown">
+						<a href="javascript:void(0);" class="transparent dropdown-toggle" type="button" id="dropdownMenu8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<img class="user" src="../dist/packaged/images/007-s.jpg" align="absmiddle">
 							太火鸟
 							<span class="glyphicon glyphicon-menu-down"></span>
 						</a>
+						<ul class="dropdown-menu mr-3r" aria-labelledby="dropdownMenu8">
+							<li><a href="">个人信息</a></li>
+							<li><a href="">退出</a></li>
+						</ul>
 						<!--
 						<a href="" class="transparent btn-magenta btn"> 登录</a>
 						<a href="" class="transparent btn-magenta btn"> 注册</a>
@@ -76,146 +129,223 @@
 		</div>
 	</div>
 
-	<!--
-	<div class="container mainwrap">
-		<div class="row">
-			<button type="button" class="btn btn-white">添加物流信息</button>
+	
+	<div class="frbird-erp">
+		<div class="navbar navbar-default mb-0 border-n nav-stab">
+			<div class="container mr-4r pr-4r">
+				<div class="navbar-header">
+					<div class="navbar-brand">
+						经销订单
+					</div>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav nav-list">
+						<li class=""><a href="">待付款</a></li>
+						<li><a href="">全部</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
-		<div class="row">
-			<table class="table table-bordered table-striped">
-				<thead>
-					<tr class="gblack">
-						<th>设置默认发货物流</th>
-						<th>物流公司</th>
-						<th>联系人</th>
-						<th>联系方式</th>
-						<th>操作</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th>
-							<div class="checkbox mtb-0">
-						        <label>
-									<input type="checkbox"> 
-								      <div class="btn btn-gray btn-xs">默认</div>
-						        </label>
-      						</div>
-      					</th>
-						<td>
-							<div class="checkbox mtb-0">
-						        <label>
-									<input type="checkbox"> 
-								    	顺丰快递
-						        </label>
-      						</div>
-      					</td>
-						<td>李三</td>
-						<td>18061238970</td>
-						<td>
-							<button class="btn btn-gray btn-xs mr-2r" type="button" >停用</button>
-							<a href="javascript:void(0);" class="magenta-color">修改</a>
-						</td>
-					</tr>
-					<tr>
-						<th>
-							<div class="checkbox mtb-0">
-						        <label>
-									<input type="checkbox"> 
-								      <div class="btn btn-gray btn-xs">默认</div>
-						        </label>
-      						</div>
-      					</th>
-						<td>
-							<div class="checkbox mtb-0">
-						        <label>
-									<input type="checkbox"> 
-								    	顺丰快递
-						        </label>
-      						</div>
-      					</td>
-						<td>李三</td>
-						<td>18061238970</td>
-						<td>
-							<button class="btn btn-gray btn-xs mr-2r" type="button" >停用</button>
-							<a href="javascript:void(0);" class="magenta-color">修改</a>
-						</td>
-					</tr>
-					<tr>
-						<th>
-							<div class="checkbox mtb-0">
-						        <label>
-									<input type="checkbox"> 
-								      <div class="btn btn-gray btn-xs">默认</div>
-						        </label>
-      						</div>
-      					</th>
-						<td>
-							<div class="checkbox mtb-0">
-						        <label>
-									<input type="checkbox"> 
-								    	顺丰快递
-						        </label>
-      						</div>
-      					</td>
-						<td>李三</td>
-						<td>18061238970</td>
-						<td>
-							<button class="btn btn-gray btn-xs mr-2r" type="button" >停用</button>
-							<a href="javascript:void(0);" class="magenta-color">修改</a>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+		
+		<div class="container mainwrap">
+			<div class="row">
+				<button type="button" class="btn btn-white">添加物流信息</button>
+			</div>
+			<div class="row">
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr class="gblack">
+							<th>设置默认发货物流</th>
+							<th>物流公司</th>
+							<th>联系人</th>
+							<th>联系方式</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>
+								<div class="checkbox mtb-0">
+							        <label>
+										<input type="checkbox"> 
+									      <div class="btn btn-gray btn-xs">默认</div>
+							        </label>
+	      						</div>
+	      					</th>
+							<td>
+								<div class="checkbox mtb-0">
+							        <label>
+										<input type="checkbox"> 
+									    	顺丰快递
+							        </label>
+	      						</div>
+	      					</td>
+							<td>李三</td>
+							<td>18061238970</td>
+							<td>
+								<button class="btn btn-gray btn-sm mr-2r" type="button" >停用</button>
+								<a href="javascript:void(0);" class="magenta-color">修改</a>
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<div class="checkbox mtb-0">
+							        <label>
+										<input type="checkbox"> 
+									      <div class="btn btn-gray btn-xs">默认</div>
+							        </label>
+	      						</div>
+	      					</th>
+							<td>
+								<div class="checkbox mtb-0">
+							        <label>
+										<input type="checkbox"> 
+									    	顺丰快递
+							        </label>
+	      						</div>
+	      					</td>
+							<td>李三</td>
+							<td>18061238970</td>
+							<td>
+								<button class="btn btn-gray btn-sm mr-2r" type="button" >停用</button>
+								<a href="javascript:void(0);" class="magenta-color">修改</a>
+							</td>
+						</tr>
+						<tr>
+							<th>
+								<div class="checkbox mtb-0">
+							        <label>
+										<input type="checkbox"> 
+									      <div class="btn btn-gray btn-xs">默认</div>
+							        </label>
+	      						</div>
+	      					</th>
+							<td>
+								<div class="checkbox mtb-0">
+							        <label>
+										<input type="checkbox"> 
+									    	顺丰快递
+							        </label>
+	      						</div>
+	      					</td>
+							<td>李三</td>
+							<td>18061238970</td>
+							<td>
+								<button class="btn btn-gray btn-sm mr-2r" type="button" >停用</button>
+								<a href="javascript:void(0);" class="magenta-color">修改</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
-	</div>
-	-->
+		
 
-	<div class="container mainwrap">
-		<div class="row">
-			<button type="button" class="btn btn-white">新增采购单</button>
-			<button type="button" class="btn btn-white">导出</button>
-			<button type="button" class="btn btn-white">导入</button>
-		</div>
-		<div class="row">
-			<table class="table table-bordered table-striped">
-				<thead>
-					<tr class="gblack">
-						<th></th>
-						<th>采购单编号</th>
-						<th>供应商</th>
-						<th>仓库</th>
-						<th>采购数量</th>
-						<th>已入库数量</th>
-						<th>创建时间</th>
-						<th>制单人</th>
-						<th>备注</th>
-						<th>操作</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th>
-							<div class="checkbox mtb-0">
-						        <label>
-									<input type="checkbox"> 
-						        </label>
-      						</div>
-      					</th>
-						<td></td>
-						<td></td>
-					</tr>
-
-
-				</tbody>
-			</table>
+		<div class="container mainwrap">
+			<div class="row">
+				<button type="button" class="btn btn-white mr-2r">新增采购单</button>
+				<button type="button" class="btn btn-white mr-2r">导出</button>
+				<button type="button" class="btn btn-white mr-2r">导入</button>
+			</div>
+			<div class="row">
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr class="gblack">
+							<th class="text-center"><input type="checkbox"></th>
+							<th>采购单编号</th>
+							<th>供应商</th>
+							<th>仓库</th>
+							<th>采购数量</th>
+							<th>已入库数量</th>
+							<th>创建时间</th>
+							<th>制单人</th>
+							<th>备注</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="text-center">
+								<input type="checkbox">
+	      					</th>
+							<td class="magenta-color">CG201605230001</td>
+							<td>太火鸟科技</td>
+							<td>北京</td>
+							<td>0</td>
+							<td>0</td>
+							<td>2016-05-23 10:08:26</td>
+							<td>Alice Greene</td>
+							<td>Alice Greene</td>
+							<td>
+								<button class="btn btn-gray btn-sm mr-2r" type="button" >审核通过</button> 
+								<a href="javascript:void(0);" class="magenta-color mr-r">详情</a>
+								<a href="javascript:void(0);" class="magenta-color">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<th class="text-center">
+								<input type="checkbox">
+	      					</th>
+							<td class="magenta-color">CG201605230001</td>
+							<td>太火鸟科技</td>
+							<td>北京</td>
+							<td>0</td>
+							<td>0</td>
+							<td>2016-05-23 10:08:26</td>
+							<td>Alice Greene</td>
+							<td>Alice Greene</td>
+							<td>
+								<button class="btn btn-gray btn-sm mr-2r" type="button" >审核通过</button> 
+								<a href="javascript:void(0);" class="magenta-color mr-r">详情</a>
+								<a href="javascript:void(0);" class="magenta-color">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<th class="text-center">
+								<input type="checkbox">
+	      					</th>
+							<td class="magenta-color">CG201605230001</td>
+							<td>太火鸟科技</td>
+							<td>北京</td>
+							<td>0</td>
+							<td>0</td>
+							<td>2016-05-23 10:08:26</td>
+							<td>Alice Greene</td>
+							<td>Alice Greene</td>
+							<td>
+								<button class="btn btn-gray btn-sm mr-2r" type="button" >审核通过</button> 
+								<a href="javascript:void(0);" class="magenta-color mr-r">详情</a>
+								<a href="javascript:void(0);" class="magenta-color">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<th class="text-center">
+								<input type="checkbox">
+	      					</th>
+							<td class="magenta-color">CG201605230001</td>
+							<td>太火鸟科技</td>
+							<td>北京</td>
+							<td>0</td>
+							<td>0</td>
+							<td>2016-05-23 10:08:26</td>
+							<td>Alice Greene</td>
+							<td>Alice Greene</td>
+							<td>
+								<button class="btn btn-gray btn-sm mr-2r" type="button" >审核通过</button> 
+								<a href="javascript:void(0);" class="magenta-color mr-r">详情</a>
+								<a href="javascript:void(0);" class="magenta-color">删除</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 
 
 </body>
 <script type="text/javascript">
-	/*$("li.dropdown.inherit").mouseover(function() {
+	/*$("li.dropdown.hover").mouseover(function() {
         $(this).addClass("open")
     }).mouseout(function() {
         $(this).removeClass("open")
