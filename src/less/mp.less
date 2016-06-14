@@ -178,20 +178,20 @@
 	margin-right:0 !omportant;
 }
 .mlr-r{
-	margin-left:0.35725rem !omportant;
+	margin-left:0.35725rem !important;
 	margin-right:0.35725rem !omportant;
 }
 .mlr-2r{
-	margin-left:0.7145rem !omportant;
-	margin-right:0.7145rem !omportant;
+	margin-left:0.7145rem !important;
+	margin-right:0.7145rem !important;
 }
 .mlr-3r{
-	margin-left:1.07175rem !omportant;
-	margin-right:1.07175rem !omportant;
+	margin-left:1.07175rem !important;
+	margin-right:1.07175rem !important;
 }
 .mlr-4r{
-	margin-left:1.429rem !omportant;
-	margin-right:1.429rem !omportant;
+	margin-left:1.429rem !important;
+	margin-right:1.429rem !important;
 }
 .p-0{
 	padding:0 !important;
@@ -283,15 +283,18 @@
 .btna{
 	border-color: transparent transparent transparent rgba(0,0,0,0.2);
 	border-width: 0 0 0 1px;
-    background: transparent;
+    background: rgba(0,0,0,0) !important;
     position: absolute;
     width: 34px;
     height: 100%;
     right: 0;
     top: 0;
 }
+.btna.btn-white,.btna.btn-white:hover{
+    background: rgba(0,0,0,0) !important;
+}
 .btna:hover{
-	background: transparent !important;
+	background: rgba(0,0,0,0) !important;
 }
 .bootstrap-select.btn-group .dropdown-menu.inner{
 	position: static;
@@ -482,4 +485,9 @@ a:focus, a:hover {
 }
 .img-thumbnail, body {
     background-color: #f5f5f5;
+}
+.btn-magenta.active,.btn-magenta:focus, .btn-magenta:active, .btn-magenta:hover, .open>.dropdown-toggle.btn-magenta {
+    color: #fff;
+    background-color: #ff0040;
+    border-color: #db0037;
 }
