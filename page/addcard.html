@@ -5,6 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../dist/packaged/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../dist/packaged/css/plugins.min.css">
 	<script type="text/javascript" src="../dist/packaged/javascript/jquery.min.js"></script>
 	<script type="text/javascript" src="../dist/packaged/javascript/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../dist/packaged/javascript/plugins.min.js"></script>
@@ -313,10 +314,75 @@
 						<div class="form-group mr-r">
 							<select class="selectpicker" id="orderType" style="display: none;">
 								<option value=" ">默认仓库</option>
-								<option value=" "> </option>
+								<option value=" ">默认仓库</option>
 							</select>
 						</div>
+						<div class="form-group ml-2r"><a style="cursor: pointer;" data-toggle="modal" data-target="#addproduct"> + 添加商品 </a></div>
+
+						<div class="modal fade" id="addproduct" tabindex="-1" role="dialog" aria-labelledby="addproductLabel">
+							<div class="modal-dialog modal-lg" role="document">
+								<div class="modal-content">
+      								<div class="modal-header">
+        								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        								<h4 class="modal-title" id="gridSystemModalLabel">添加商品</h4>
+        							</div>
+        							<div class="modal-body">
+										<div style="width:250px;" class="input-group">
+						                  <input name="q" value="" type="text" placeholder="请输入SKU编码/商品名称" class="form-control">
+						                  <span class="input-group-btn">
+						                  <button class="btn btn-magenta query" type="button"><span class="glyphicon glyphicon-search"></span></button>
+						                  </span>
+						                </div>
+						                <table class="table table-bordered table-striped mt-4r">
+						                	<thead class="table-bordered">
+						                		<tr class="gblack">
+						                			<th class="text-center">
+														<input type="checkbox" id="checkAll">
+						                			</th>
+						                			<th>商品图</th>
+						                			<th>SKU编码</th>
+						                			<th>商品名称</th>
+						                			<th>属性</th>
+						                			<th>库存</th>
+						                		</tr>
+						                	</thead>
+						                	<tbody>
+						                		<tr>
+						                			<td class="text-center"><input type="checkbox" name="Order"></td>
+						                			<td><img src="http://ht-goods.oss-cn-hangzhou.aliyuncs.com/29988/1463743132454Hiking-And-Trekking.jpg" alt="50x50" class="img-thumbnail" style="height: 50px; width: 50px;"></td>
+						                			<td class="fb">12121 </td>
+						                			<td>自行车</td>
+						                			<td>自行车</td>
+						                			<td>704</td>
+						                		</tr>
+						                		<tr>
+						                			<td class="text-center"><input type="checkbox" name="Order"></td>
+						                			<td><img src="http://ht-goods.oss-cn-hangzhou.aliyuncs.com/29988/1463743132454Hiking-And-Trekking.jpg" alt="50x50" class="img-thumbnail" style="height: 50px; width: 50px;"></td>
+						                			<td class="fb">12121 </td>
+						                			<td>自行车</td>
+						                			<td>自行车</td>
+						                			<td>704</td>
+						                		</tr>
+						                		<tr>
+						                			<td class="text-center"><input type="checkbox" name="Order"></td>
+						                			<td><img src="http://ht-goods.oss-cn-hangzhou.aliyuncs.com/29988/1463743132454Hiking-And-Trekking.jpg" alt="50x50" class="img-thumbnail" style="height: 50px; width: 50px;"></td>
+						                			<td class="fb">12121 </td>
+						                			<td>自行车</td>
+						                			<td>自行车</td>
+						                			<td>704</td>
+						                		</tr>
+						                	</tbody>
+
+						                </table> 
+        							</div>
+
+								</div>
+							</div>
+						</div>
+						
 					</form>
+
+
 				</div>
 			</div>
 		</div>
@@ -328,4 +394,9 @@
 
 	</div>
 </body>
+<script type="text/javascript">
+	$("#checkAll").click(function () {
+        $("input[name='Order']:checkbox").prop("checked", this.checked);
+    });
+</script>
 </html>

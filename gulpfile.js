@@ -58,11 +58,11 @@ gulp.task('packagejs', function(){
 // 预编译less,压缩css
 gulp.task('minifycss', function(){
     // 通过pipe() 把要处理的文件导向插件,通过查找对应插件的api执行对应的命令
-    gulp.src(['src/less/bootstrap.less'])
+    gulp.src(['src/less/*.less'])
         .pipe(less())
         .pipe(gulp.dest(paths.dist.uncompressed + '/css'));
 
-    gulp.src(['src/less/bootstrap.less'])
+    gulp.src(['src/less/*.less'])
         .pipe(less())
         //.pipe(gulp.dest(paths.dist.uncompressed + '/css'))
         .pipe(minifyCSS())
@@ -73,12 +73,20 @@ gulp.task('minifycss', function(){
 // 合并,压缩css
 gulp.task('packagecss', function(){
     // 合并css
-    gulp.src(paths.dist.minified + '/css/bootstrap.min.css')
-        .pipe(concat('bootstrap.css'))
+    gulp.src(paths.dist.minified + '/css/*.css')
+        .pipe(concat('plugins.css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.dist.packaged + '/css'));
 });
+gulp.task('copy', function() {
+    gulp.src(['src/less/bootstrap/*.css'])
+    // Pass in options to the task
+    .pipe(gulp.dest(paths.dist.packaged + '/css'));
 
+    return gulp.src(['src/fonts/*.*'])
+    // Pass in options to the task
+    .pipe(gulp.dest(paths.dist.packaged + '/fonts'));
+});
 /*gulp.task('jade', function() {
     return gulp.src('src/css/semantic/semantic.jade')
     .pipe(jade())
@@ -94,7 +102,7 @@ gulp.task('images', function() {
 
 // 批量命令
 gulp.task('comprass', ['minifycss', 'minifyjs'], function(){
-    gulp.start('packagecss', 'packagejs', 'images');
+    gulp.start('packagecss', 'packagejs', 'images', 'copy');
 });
 
 // 清理旧文件
@@ -110,7 +118,7 @@ gulp.task('default', ['clean'], function(){
 // 监听事件
 gulp.task('watch', function(){
     // 监听文件是否修改，以便执行相应的任务
-    gulp.watch('src/less/*.less', ['minifycss']);
+    gulp.watch('src/less/*.less', ['minifycss','packagecss','comprass']);
     gulp.watch('src/js/*.js', ['minifyjs']);
     gulp.watch('src/js/*/*.js', ['minifyjs']);
 });

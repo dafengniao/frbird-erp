@@ -5,6 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../dist/packaged/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../dist/packaged/css/plugins.min.css">
 	<script type="text/javascript" src="../dist/packaged/javascript/jquery.min.js"></script>
 	<script type="text/javascript" src="../dist/packaged/javascript/bootstrap.min.js"></script>
 	
@@ -251,7 +252,7 @@
 				<table class="table table-bordered table-striped">
 					<thead>
 						<tr class="gblack">
-							<th class="text-center"><input type="checkbox"></th>
+							<th class="text-center"><input type="checkbox" id="checkAll"></th>
 							<th>采购单编号</th>
 							<th>供应商</th>
 							<th>仓库</th>
@@ -266,7 +267,7 @@
 					<tbody>
 						<tr>
 							<th class="text-center">
-								<input type="checkbox">
+								<input type="checkbox" name="Order">
 	      					</th>
 							<td class="magenta-color">CG201605230001</td>
 							<td>太火鸟科技</td>
@@ -284,7 +285,7 @@
 						</tr>
 						<tr>
 							<th class="text-center">
-								<input type="checkbox">
+								<input type="checkbox" name="Order">
 	      					</th>
 							<td class="magenta-color">CG201605230001</td>
 							<td>太火鸟科技</td>
@@ -302,7 +303,7 @@
 						</tr>
 						<tr>
 							<th class="text-center">
-								<input type="checkbox">
+								<input type="checkbox" name="Order">
 	      					</th>
 							<td class="magenta-color">CG201605230001</td>
 							<td>太火鸟科技</td>
@@ -320,7 +321,7 @@
 						</tr>
 						<tr>
 							<th class="text-center">
-								<input type="checkbox">
+								<input type="checkbox" name="Order">
 	      					</th>
 							<td class="magenta-color">CG201605230001</td>
 							<td>太火鸟科技</td>
@@ -345,6 +346,9 @@
 
 </body>
 <script type="text/javascript">
+	$("#checkAll").click(function () {
+        $("input[name='Order']:checkbox").prop("checked", this.checked);
+    });
 	/*$("li.dropdown.hover").mouseover(function() {
         $(this).addClass("open")
     }).mouseout(function() {
